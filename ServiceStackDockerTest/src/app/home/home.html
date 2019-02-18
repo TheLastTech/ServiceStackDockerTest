@@ -1,0 +1,9 @@
+<div class="form-group">
+    <input class="form-control" type="text" placeholder="Your name" 
+           autocomplete="off"
+           [(ngModel)]="name"
+           (ngModelChange)="nameChanged($event)"/>
+
+  <h3 class="result">{{ result }}</h3>
+  <h3>tagged</h3>
+</div>

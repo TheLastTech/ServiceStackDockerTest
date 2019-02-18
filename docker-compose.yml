@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  servicestackdockertest:
+    image: ${DOCKER_REGISTRY-}servicestackdockertest
+    build:
+      context: .
+      dockerfile: ServiceStackDockerTest/Dockerfile
+    ports:
+      - "41234:80"

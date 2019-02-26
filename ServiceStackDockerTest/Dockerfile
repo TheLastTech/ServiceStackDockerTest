@@ -9,9 +9,9 @@ COPY ServiceStackDockerTest.ServiceModel/ServiceStackDockerTest.ServiceModel.csp
 COPY ServiceStackDockerTest.ServiceInterface/ServiceStackDockerTest.ServiceInterface.csproj ServiceStackDockerTest.ServiceInterface/
 RUN dotnet restore ServiceStackDockerTest/ServiceStackDockerTest.csproj
 COPY . .
+
 WORKDIR /src/ServiceStackDockerTest
 RUN dotnet build ServiceStackDockerTest.csproj -c Release -o /app
-
 FROM build AS publish
 RUN dotnet publish ServiceStackDockerTest.csproj -c Release -o /app
 

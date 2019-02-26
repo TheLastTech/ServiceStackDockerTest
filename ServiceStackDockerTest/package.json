@@ -2,7 +2,6 @@
   "name": "service-stack-docker-test",
   "version": "0.0.0",
   "scripts": {
-    "postinstall": "npm run build",
     "ng": "ng",
     "dev": "ng build --aot --watch",
     "start": "ng serve --proxy-config proxy.config.json",

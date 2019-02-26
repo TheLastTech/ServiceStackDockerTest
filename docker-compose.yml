@@ -8,3 +8,12 @@ services:
       dockerfile: ServiceStackDockerTest/Dockerfile
     ports:
       - "41234:80"
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: Secrets:Post
+
+ 
+
+ 
